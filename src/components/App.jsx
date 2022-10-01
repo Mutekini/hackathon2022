@@ -10,8 +10,8 @@ function App() {
         <div className="w3-container w3-teal">
             <h1>Maidenless Financial Manager</h1>
         </div>
-        <BalChart />
         <NavBar />
+        <BalChart />
         <img
         src={spacePic}
         className="logo space"
