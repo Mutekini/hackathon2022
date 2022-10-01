@@ -7,18 +7,43 @@ import DaysInMonth from '../api/Date.js'
 
 function BalChart(){
   Chart.register(...registerables)
-  const transaction = new Transaction("Walmart", 30)
+  const transaction = new Transaction("Walmart", 30) //Temporary
   const currentYear = transaction.getDate().substring(0,4);
   const currentMonth = transaction.getDate().substring(6,7);
   const currentDaysInMonth = DaysInMonth(currentYear,currentMonth)
-  const daysArray = Array(currentDaysInMonth + 1).fill().map((_, idx) => idx + 1)
+  const daysArray = Array(currentDaysInMonth).fill().map((_, idx) => idx + 1)
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   const onlyshow = daysArray.filter(x => x - 1 === transaction.getCurDay())
+=======
+=======
+>>>>>>> Stashed changes
+  //if(daysArray.filter(=> x - 1 === transaction.getCurDay()
+  //{
+
+  //}
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Monthly Balance',
+      },
+    },
+  };
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   const data = {
     labels: daysArray,
     datasets: [
       {
         label: "Balance",
-        data: onlyshow, //Temporary
+        data: [], //Temporary
         fill: true,
         backgroundColor: "rgba(75,192,192,0.2)",
         borderColor: "rgba(75,192,192,1)"
@@ -27,7 +52,7 @@ function BalChart(){
   }
   return (
     <div className="BalChart">
-      <Line data={data} />
+      <Line options={options} data={data} />
     </div>
   )
 }
