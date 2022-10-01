@@ -10,7 +10,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <BrowserRouter forceRefresh={true}>
           <Routes>
               <Route path="/" element={<App />}/>
-              <Route path={"/login"} element={<Login />}/>
+              <Route path="/login" element={<Login />}/>
+              <Route path="user-data" element={<div>data!</div>}></Route>
           </Routes>
       </BrowserRouter>
   </React.StrictMode>
