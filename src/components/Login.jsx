@@ -8,7 +8,7 @@ function Login() {
         event.preventDefault();
         const nav = useNavigate();
         alert("You have logged in as " + email);
-        nav('/user');
+        nav("hackathon2022/user-data")
     }
     return (
         <div className="w3-card-4">
