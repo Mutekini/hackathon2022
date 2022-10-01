@@ -12,8 +12,11 @@ function BalChart(){
   const currentMonth = transaction.getDate().substring(6,7);
   const currentDaysInMonth = DaysInMonth(currentYear,currentMonth)
   const daysArray = Array(currentDaysInMonth).fill().map((_, idx) => idx + 1)
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+=======
+>>>>>>> 2a96b24bd84850fcebe66e4fc4a4d0d610cb8e34
   const onlyshow = daysArray.filter(x => x - 1 === transaction.getCurDay())
 =======
 =======
