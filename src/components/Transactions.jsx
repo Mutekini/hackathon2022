@@ -1,34 +1,32 @@
-import { useState } from 'react'
-import reactLogo from '../assets/react.svg'
-import './App.css'
+import crypto from 'crypto'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+class Transaction {
+  constructor(description,value) {
+    this.id = crypto.randomUUID()
+    this.description = description
+    this.value = value
+    this.percentage = -1
+  }
+  calcPercentage(totalIncome){
+    if (totalIncome > 0){
+      this.percentage = Math.round((this.value / totalIncome) * 100)
+    } else {
+      this.percentage = -1
+    }
+  };
+  retrievePercentage(){
+    return this.percentage
+  }
+};
+class Income {
+  constructor(description,value){
+    this.id = crypto.randomUUID()
+    this.description = description
+    this.value = value
+  }
+  calculateTotal(type){
+    const sum = 0
+    //Missing data
+  }
 }
-
-export default App
+export default Transactions
