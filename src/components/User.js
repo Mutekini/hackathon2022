@@ -4,19 +4,21 @@ class User {
     constructor(Name, Uid) {
         this.name = Name;
         this.uid = Uid;
+        this.transactions = []
     };
 
     //declares a new transactions object which amount,
     //description,and tid (transaction id)
     //in the form 
     //transaction[description,value]
-    #transactions = [];
+    transactions = [];
+
     #name;
     #uid;
 
     //use this for adding Transaction objects only!!!!!!
     addTransactions(transaction) {
-        this.transactions.add(transaction);
+        this.transactions.push(transaction);
     };
 
     //finds a transaction by checking if its tid is the same as the tid
