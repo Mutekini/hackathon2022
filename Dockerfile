@@ -1,2 +1,2 @@
 FROM node
-COPY pocketbase.exe /app/
+COPY pocketbase.exe /app
