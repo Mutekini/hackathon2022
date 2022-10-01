@@ -2,18 +2,10 @@ import { useState } from 'react'
 import reactLogo from '../assets/react.svg'
 import './App.css'
 import Transaction from './Transaction.js'
-import User from './User.js'
-
+import BalChart from './BalChart.jsx'
+import { CategoryScale } from 'chart.js'
 function App() {
   const [count, setCount] = useState(0)
-  console.log(new Transaction())
-
-  let groceryBill = new Transaction("groceries", 100);
-  let user = new User("Bob",1);
-  user.addTransactions(groceryBill);
-
-  console.log(user.getTransaction(groceryBill.getTid()));
-
   return (
     <div className="App">
       <div>
@@ -24,6 +16,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      <BalChart />
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
