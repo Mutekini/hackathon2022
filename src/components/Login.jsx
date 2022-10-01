@@ -28,7 +28,6 @@ function Login() {
                 <input name="password" value={password} onChange={(e) =>{
                     setPassword(e.target.value)
                 }} className="w3-input" type="password" />
-
                 <input type="submit" value="Submit">
                 </input>
             </form>
