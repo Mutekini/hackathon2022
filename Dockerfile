@@ -22,7 +22,8 @@ RUN wget -O- https://api.github.com/repos/pocketbase/pocketbase/releases/latest 
   | tr -d '"' \
   | wget -qi -
 RUN unzip pocketbase*.zip -d pocketbase
-RUN chmod +x ./pocketbase
+WORKDIR /pocketbase
+RUN chmod +x pocketbase
 RUN rm pocketbase*.zip
 
 # Notify Docker that the container wants to expose a port.
