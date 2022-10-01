@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "server" : "pocketbase serve",
-    "build": "vite build && npx http-server ./dist -p 0",
+    "build": "vite build && npx http-server ./dist -p 0 -a 0.0.0.0",
     "preview": "vite preview"
   },
   "dependencies": {
