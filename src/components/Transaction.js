@@ -30,7 +30,7 @@ class Income {
     this.value = value
   }
   getTidIncome(){
-    return this.tid 
+    return this.tid
   }
   calcTotal(type){
     const sum = 0
