@@ -1,6 +1,5 @@
 import './App.css'
 import Transaction from './Transaction.js'
-import BalChart from './BalChart.jsx'
 import 'w3-css'
 import NavBar from "./NavBar.jsx";
 function App() {
@@ -10,8 +9,6 @@ function App() {
             <h1>Maidenless Financial Manager</h1>
         </div>
         <NavBar />
-        <BalChart />
-
     </div>
 
   )

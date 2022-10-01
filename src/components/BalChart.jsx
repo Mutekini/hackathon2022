@@ -3,7 +3,7 @@ import { Line } from 'react-chartjs-2'
 import { Chart, registerables } from 'chart.js';
 import Transaction from './Transaction.js'
 import DaysInMonth from '../api/Date.js'
-
+import LineData from '../api/LineData.js'
 
 
 function BalChart(){
@@ -13,10 +13,6 @@ function BalChart(){
   const currentMonth = transaction.getDate().substring(6,7);
   const currentDaysInMonth = DaysInMonth(currentYear,currentMonth)
   const daysArray = Array(currentDaysInMonth).fill().map((_, idx) => idx + 1)
-  //if(daysArray.filter(=> x - 1 === transaction.getCurDay()
-  //{
-
-  //}
   const options = {
     responsive: true,
     plugins: {
