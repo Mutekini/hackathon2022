@@ -39,5 +39,5 @@ function App() {
     </div>
   )
 }
-
+console.log(new Transaction())
 export default App
