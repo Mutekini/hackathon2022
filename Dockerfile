@@ -1,6 +1,5 @@
 FROM amd64/ubuntu
 LABEL maintainer="Krushi Raj Tula <krushiraj123@gmail.com>"
-COPY . /app/
 # Install the dependencies
 RUN apt-get update
 RUN apt-get install \
@@ -9,8 +8,8 @@ RUN apt-get install \
     software-properties-common
 # Download Pocketbase and install it for AMD64
 RUN mkdir pocketbase
-COPY /pb_data /pocketbase
-COPY /pb_public /pocketbase
+COPY . pocketbase
+
 RUN wget -O- https://api.github.com/repos/pocketbase/pocketbase/releases/latest \
   | grep "linux_amd64.zip" \
   | cut -d : -f 2,3 \

@@ -1,13 +1,19 @@
-import { useState } from 'react'
 import './App.css'
 import Transaction from './Transaction.js'
 import BalChart from './BalChart.jsx'
-import { CategoryScale } from 'chart.js'
+import 'w3-css'
+import NavBar from "./NavBar.jsx";
 function App() {
   return (
-    <div className="App">
-      <BalChart />
+    <div className={"App"}>
+        <div className="w3-container w3-teal">
+            <h1>Maidenless Financial Manager</h1>
+        </div>
+        <NavBar />
+        <BalChart />
+
     </div>
+
   )
 }
 console.log(new Transaction())
