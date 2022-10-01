@@ -5,8 +5,8 @@ import 'w3-css'
 function NavBar() {
     return (
             <div className={"w3-bar w3-border-blue"}>
-                <a href="/" className={"w3-bar-item w3-hover-amber"}>Home</a>
-                <a href="/login" className={"w3-bar-item w3-hover-amber"}>Login</a>
+                <a href="/hackathon2022/" className={"w3-bar-item w3-hover-amber"}>Home</a>
+                <a href="/hackathon2022/login" className={"w3-bar-item w3-hover-amber"}>Login</a>
             </div>
     )
 }
