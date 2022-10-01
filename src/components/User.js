@@ -10,7 +10,7 @@ class User {
 
     //declares a new transactions object which amount,
     //description,and tid (transaction id)
-    //in the form 
+    //in the form
     //transaction[description,value]
     #transactions = [];
     #balance
