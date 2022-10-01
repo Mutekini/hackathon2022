@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "server" : "pocketbase serve",
-    "build": "vite build && npx http-server ./dist -p 0 -a 0.0.0.0",
+    "server" : "pocketbase serve --https 0.0.0.0:8080",
+    "build": "vite build && npm run server",
     "preview": "vite preview"
   },
   "dependencies": {
