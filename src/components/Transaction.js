@@ -9,6 +9,7 @@ class Transaction {
     this.percentage = -1
     const date = new Date()
     this.strDate = date.toISOString()
+
   }
   getDescription(){
     return this.description
@@ -18,6 +19,9 @@ class Transaction {
   }
   getTid(){
     return this.tid
+  }
+  getCurDay(){
+    return Number.parseInt(this.strDate.substring(6,7))
   }
   getDate(){
     return this.strDate
