@@ -13,7 +13,7 @@ function Login() {
     return (
         <div className="w3-card-4">
             <div className="w3-container w3-green">
-                <h2>Header</h2>
+                <h2>Login</h2>
             </div>
             <form className="w3-container" onSubmit={handleSubmit}>
                 <label>
