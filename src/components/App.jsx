@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import reactLogo from '../assets/react.svg'
 import './App.css'
+import Transaction from './Transactions.js'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  console.log(new Transaction())
   return (
     <div className="App">
       <div>

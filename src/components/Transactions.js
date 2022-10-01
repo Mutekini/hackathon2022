@@ -1,11 +1,15 @@
-import crypto from 'crypto'
+import { v4 as uuidv4 } from 'uuid';
 
 class Transaction {
+  tid;
   constructor(description,value) {
-    this.id = crypto.randomUUID()
+    this.tid = uuidv4()
     this.description = description
     this.value = value
     this.percentage = -1
+  }
+  getTid(){
+    return this.tid
   }
   calcPercentage(totalIncome){
     if (totalIncome > 0){
@@ -19,14 +23,18 @@ class Transaction {
   }
 };
 class Income {
+  tid;
   constructor(description,value){
-    this.id = crypto.randomUUID()
+    this.tid = uuidv4()
     this.description = description
     this.value = value
   }
-  calculateTotal(type){
+  getTidIncome(){
+    return this.tid 
+  }
+  calcTotal(type){
     const sum = 0
     //Missing data
   }
 }
-export default Transactions
+export default Transaction
