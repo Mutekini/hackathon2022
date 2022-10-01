@@ -10,11 +10,13 @@ function App() {
             <h1>Maidenless Financial Manager</h1>
         </div>
         <NavBar />
-        <div className ="Icons">
-          <img src={spacePic} className="logo space" alt="Space logo" />
-        </div>
+        <img
+        src={spacePic}
+        className="logo space"
+        style={{ height: 1920, width: 1200}}
+        alt="Space logo"
+        />
     </div>
-
   )
 }
 console.log(new Transaction())
