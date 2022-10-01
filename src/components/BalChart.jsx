@@ -17,7 +17,7 @@ function BalChart(){
   //{
 
   //}
-  /*const options = {
+  const options = {
     responsive: true,
     plugins: {
       legend: {
@@ -29,7 +29,6 @@ function BalChart(){
       },
     },
   };
-  */
   const data = {
     labels: daysArray,
     datasets: [
