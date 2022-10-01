@@ -2,10 +2,18 @@ import { useState } from 'react'
 import reactLogo from '../assets/react.svg'
 import './App.css'
 import Transaction from './Transaction.js'
+import User from './User.js'
 
 function App() {
   const [count, setCount] = useState(0)
   console.log(new Transaction())
+
+  let groceryBill = new Transaction("groceries", 100);
+  let user = new User("Bob",1);
+  user.addTransactions(groceryBill);
+
+  console.log(user.getTransaction(groceryBill.getTid()));
+
   return (
     <div className="App">
       <div>
