@@ -8,6 +8,7 @@ class User {
         this.balance = 0;
     };
 
+
     //declares a new transactions object which amount,
     //description,and tid (transaction id)
     //in the form
