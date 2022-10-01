@@ -1,11 +1,13 @@
 {
   "name": "hackathon-2022",
   "private": true,
+  "homepage": ".",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "server" : "../pocketbase.exe serve --https 0.0.0.0:8080",
+    "build": "vite build && npm run server",
     "preview": "vite preview"
   },
   "dependencies": {
