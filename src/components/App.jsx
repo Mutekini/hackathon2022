@@ -5,7 +5,6 @@ import Transaction from './Transaction.js'
 
 function App() {
   const [count, setCount] = useState(0)
-  console.log(new Transaction())
   return (
     <div className="App">
       <div>
@@ -31,5 +30,5 @@ function App() {
     </div>
   )
 }
-
+console.log(new Transaction())
 export default App

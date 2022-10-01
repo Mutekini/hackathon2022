@@ -7,9 +7,20 @@ class Transaction {
     this.description = description
     this.value = value
     this.percentage = -1
+    const date = new Date()
+    this.strDate = date.toISOString()
+  }
+  getDescription(){
+    return this.description
+  }
+  getValue(){
+    return this.value
   }
   getTid(){
     return this.tid
+  }
+  getDate(){
+    return this.strDate
   }
   calcPercentage(totalIncome){
     if (totalIncome > 0){
@@ -31,6 +42,12 @@ class Income {
   }
   getTidIncome(){
     return this.tid
+  }
+  getDescIncome(){
+    return this.description
+  }
+  getValIncome(){
+    return this.value
   }
   calcTotal(type){
     const sum = 0
